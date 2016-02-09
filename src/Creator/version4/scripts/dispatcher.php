@@ -84,9 +84,9 @@ if (isset($_SESSION['fileToLoad'])) {
 			$_SESSION['cc']->evoCrePoint += $_SESSION['credPoints'];
         }else{//We are in creation mode
             if(!$_SESSION['creationMode']){//We pass in evo mode
-                $_SESSION['cc']->creationMode = false;
                 $_SESSION['cc']->evoCrePoint = $_SESSION['cc']->getCredit(); // we keep credits from creation mode
-				$_SESSION['cc']->evoRezPoint += $_SESSION['rezPoints'];
+				$_SESSION['cc']->creationMode = false;
+                $_SESSION['cc']->evoRezPoint += $_SESSION['rezPoints'];
 				$_SESSION['cc']->evoRepPoint += $_SESSION['repPoints'];
 				$_SESSION['cc']->evoCrePoint += $_SESSION['credPoints'];
             }else{//We stay in creation mode
