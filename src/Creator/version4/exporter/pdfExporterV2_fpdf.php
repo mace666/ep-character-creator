@@ -485,13 +485,13 @@
 						//NOTES 
 						$y_space = 3;
 						$apt_x = 83;
-						$apt_y = 90	;
+						$apt_y = 84	;
 						$pdf->SetFont('Lato-Lig','',7);	
 						$note = formatItForRect($character->note,68);
 						$paddle = 0;
 						foreach($note as $line)
 						{
-							$pdf->Text( $apt_x, $apt_y-$paddle, formatIt($line));//Bm desc
+							$pdf->Text( $apt_x, $apt_y+$paddle, formatIt($line));//Bm desc
 							$paddle +=3;
 						} 
 						$apt_y -= $y_space+$paddle;
