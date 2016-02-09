@@ -137,11 +137,14 @@ class EPSkill extends EPAtom{
         $this->specialization = $savePack['specialization'];
         $this->isNativeTongue = $savePack['isNativeTongue'];
         $this->nativeTongueBonus = $savePack['nativeTongueBonus'];             
-        if(isset($savePack['groupsArray'])){
-                foreach($savePack['groupsArray'] as $m){
-                    array_push($this->groups, $m);
-                } 
-            }	
+		if(isset($savePack['groupsArray'])){
+			$this->groups = $savePack['groupsArray'];
+		 }
+#        if(isset($savePack['groupsArray'])){
+#                foreach($savePack['groupsArray'] as $m){
+#                    array_push($this->groups, $m);
+#                } 
+#            }	
         $this->maxValue = $savePack['maxValue'];     
         $this->maxValueMorphMod = $savePack['maxValueMorphMod'];
         $this->maxValueTraitMod = $savePack['maxValueTraitMod'];
